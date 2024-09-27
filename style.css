@@ -1,3 +1,17 @@
+/* Stiluri pentru body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 60px; /* Spațiu pentru navbar */
+}
+
+/* Stiluri pentru navbar */
 nav {
     position: fixed;
     top: 0;
@@ -10,9 +24,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Adaugă această linie */
+    z-index: 1000;
 }
-
 
 nav ul {
     list-style: none;
@@ -33,259 +46,96 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  
-    background-color: #000000;
-   
+    background-color: #545454;
 }
 
-  
-  /* Stiluri pentru burger menu */
-  .burger {
+/* Stiluri pentru burger menu */
+.burger {
     margin-top: 10px;
-    position: fixed;
     display: none;
     flex-direction: column;
     cursor: pointer;
-  
-  }
-  
-  .burger span {
-    
+}
+
+.burger span {
     height: 3px;
     width: 25px;
     background-color: #fff;
     margin-bottom: 5px;
-    border-radius: 5px;
-    margin-right: 15px;
-  }
-  
-  @media (max-width: 768px) {
-    nav {
-        position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+}
 
-        
-    }
-    
+/* Stiluri responsive */
+@media (max-width: 768px) {
     nav ul {
         display: none;
         flex-direction: column;
         background-color: #1e1d1d;
         position: absolute;
-        top: 100px; /* Poziționează meniul sub bara de navigare */
-        left: 50%; /* Centrare pe axa X */
-        transform: translateX(-50%); /* Corectează pentru a centra meniul */
-        width: 90%;/* Ajustează lățimea meniului */
-        height: 500px;
-        padding: 20px; /* Adaugă spațiu între elementele meniului */
-        border-radius: 10px; /* Rotunjirea colțurilor pentru un aspect mai plăcut */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adaugă un umbra pentru meniu */
+        top: 60px; /* Poziționează meniul sub navbar */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     }
     
     nav ul.show {
         display: flex;
-        flex-direction: column;
     }
-    
-    nav ul li {
-        margin-bottom: 10px;
-    }
-    
+
     .burger {
         display: flex;
-        position: absolute; /* Asigură poziționarea absolută a burgerului */
-        top: 10px; /* Poziționează burgerul în partea de sus a barei de navigare */
-        right: 15px; /* Poziționează burgerul în partea dreaptă a barei de navigare */
+        position: absolute;
+        top: 10px;
+        right: 15px;
         height: 40px;
     }
-    .container {
-       
-        margin-left: 5%; /* Reducem marginea stângă pentru a încadra lista pe ecran mai mic */
-        margin-top: 5px;
-    }
-
-
-    .patrulatere-list {
-        display: block; /* Schimbăm display-ul listei pe ecrane mici */
-        margin-top: 10%;
-    }
-
-    .patrulater {
-        width: auto; /* Setăm lățimea automată pentru patrulatere */
-        margin-right: 0; /* Eliminăm spațiul orizontal între patrulatere */
-        margin-top: 5%;
-    }
-  .patrulater:hover{
-    transform: none;
-  }
-  .contact-info {
-    flex-direction: column; /* Schimbă direcția de afișare a div-urilor pe coloane */
-    align-items: center; /* Aliniază div-urile pe centru */
 }
 
-.info-section {
-    width: 90%; /* Setează lățimea div-urilor la 90% pentru a se potrivi ecranului mai mic */
-    margin-right: 0; /* Elimină marginea dreaptă */
-    margin-bottom: 20px; /* Adaugă o margine inferioară între div-uri */
-}
-.logare ul {
-    flex-direction: row; /* Așezare orizontală a elementelor */
-    flex-wrap: wrap; /* Împachetare pe mai multe linii dacă nu încap toate elementele pe o singură linie */
-}
-
-.logare li {
-    margin-right: 20px; /* Adăugăm o margine dreapta între elemente */
-    margin-bottom: 0; /* Eliminăm marginea inferioară */
-}
-
-.logare li:last-child {
-    margin-right: 0; /* Eliminăm marginea dreaptă pentru ultimul element */
-}
-}
- 
+/* Stiluri pentru footer */
 .footer-content {
-    position: fixed; /* Fixează footer-ul */
-    bottom: 0; /* Plasează-l în partea de jos a paginii */
-    left: 0; /* Aliniere la stânga */
-    width: 100%; /* Latimea de 100% */
-    background-color: #000000; /* Culorează fundalul footer-ului */
-    color: #fff; /* Culorează textul în alb */
-    padding: 20px 0; /* Adaugă un spațiu de 20px sus și jos */
-    text-align: center; /* Aliniază textul la centru */
-    font-size: 16px; /* Mărimea fontului */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
 }
-
 
 .footer-content p {
-    margin: 0; /* Elimină marginile din jurul textului */
-    font-size: inherit; /* Folosește mărimea fontului din părinte */
-}
-
-.footer-content p::after {
-    content: ''; /* Adaugă un element de tip pseudo-element */
-    display: block; /* Face elementul să fie un bloc */
-    width: 100%; /* Latimea de 100% */
-    height: 1px; /* Înălțime de 1 pixel */
-    background-color: #fff; /* Culorează linia în alb */
-    margin-top: 10px; /* Adaugă spațiu între text și linie */
-}
-.container {
-    margin-top: 6%; /* Margină de 3% sus */
-    margin-left: 18%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.row {
-    display: inline-flex;
-    margin-bottom: 50px; /* Distanta verticala intre randuri */
-}
-
-.patrulatere-list {
-    list-style-type: none;
-    padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
 }
 
-.patrulater {
-    width: 250px;
-    height: 250px;
-    background-color: #f0f0f0;
-    border-radius: 20px; /* Ajustează raza pentru a rotunji colțurile */
-    margin: 30px; /* Spațiu orizontal intre patrulatere */
-    display: block;
-    overflow: hidden;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
-    transition: transform 0.3s ease; 
-}
-.patrulater:hover{
-    transform: scale(1.1);
- 
-        display: inline-block;
-    text-decoration: none; /* Pentru a elimina sublinierea implicită */
-}
-/* pentru a evita spațiul după ultimul patrulater din rând */
-.patrulatere-list .patrulater:last-child {
-    margin-right: 0;
-}
-
-.patrulater h3 {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.patrulater img {
-    max-width: 100%;
-    /* Setează lățimea maximă a imaginii la 100% din lățimea patrulaterului */
-    height: auto; /* Menține proporțiile originale ale imaginii */
-    border-radius: 10px; /* Adaugă colțuri rotunjite la imagine */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adaugă o umbră sub imagine */
-    margin-bottom: 20px; /* Adaugă un spațiu între imagini */
-    
-}
-.navbar a{
-    display: inline-block;
-    text-decoration: none; /* Pentru a elimina sublinierea implicită */
-    transition: transform 0.3s ease; 
-}
-.navbar  a:hover{
-    transform: scale(1.2);
-
-}
-.navbar a span{
-    vertical-align: middle;
-}
-.logo {
-    transition: transform 0.3s ease; 
-}
-.logo:hover{
-    transform: scale(1.2);
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  form {
+/* Stiluri pentru formulare */
+form {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
-  }
+}
 
-  label {
+label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-  }
+}
 
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     width: calc(100% - 22px);
     padding: 8px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
-  }
+}
 
-  input[type="submit"] {
+input[type="submit"] {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -294,73 +144,13 @@ body {
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
 
-  input[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #0056b3;
-  }
-
-  hr {
-    margin: 20px 0;
-    border: none;
-    border-top: 1px solid #ccc;
-  }
-  h2 {
-    margin-bottom: 20px; /* Adaugă un spațiu între elementul h2 și formular */
-    font-size: 24px; /* Mărimea fontului */
-    color: #333; /* Culoarea textului */
-    text-align: center; /* Aliniere la centru */
-    text-transform: uppercase; /* Transformă textul în majuscule */
-    letter-spacing: 1px; /* Spațierea între caractere */
 }
 
-
-.logare {
-    z-index: 1; /* Asigură afișarea .logare peste lista din nav */
-}
-.logare h1{
-    font-size: 36px;
-    text-align: center;
-}
-
-.logare .btn{
-    width: 100%;
-    height: 45px;
-    background-color: #6b9bcf;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #f4f4f4;
-    font-weight: 600;
-
-}
-
-.logare .remeber-forgot{
-    display: flex;
-    justify-content:  space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15;
-}
-.remeber-forgot{
-    accent-color: #ffff;
-    margin-right: 3px;
-}
-
-.logare .register-link{
-    font-size: 14.5px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.register-link p a {
-    color: #007bff
-  
-}
-
-.register-link p a:hover{
-    text-decoration: underline;
-}
+/* Stiluri pentru elementele de contact */
 .contact-info {
     display: flex;
     justify-content: space-around;
@@ -375,33 +165,110 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-right: 15px; /* Adaugă o margine de 15px între div-uri */
+    margin-right: 15px;
 }
 
 .info-section:last-child {
-    margin-right: 0; /* Elimină marginea pentru ultimul div */
+    margin-right: 0;
 }
 
-.info-section h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.info-section ul {
-    list-style: none;
+/* Stiluri pentru patrulatere */
+.patrulatere-list {
+    list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.info-section li {
-    margin-bottom: 10px;
-    color: #666;
+.patrulater {
+    width: 250px;
+    height: 250px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin: 30px;
+    display: block;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
 }
 
-.info-section li strong {
-    color: #333;
+.patrulater:hover {
+    transform: scale(1.1);
 }
 
+/* Stiluri pentru h3 în patrulatere */
+.patrulater h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Stiluri pentru imagini */
+.patrulater img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Stiluri pentru logo și navbar */
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.navbar a {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
+/* Stiluri pentru secțiunea de logare */
+.logare {
+    z-index: 1;
+}
+
+.logare h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.logare .btn {
+    width: 100%;
+    height: 45px;
+    background-color: #6b9bcf;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #f4f4f4;
+    font-weight: 600;
+}
+
+.logare .remeber-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+/* Stiluri pentru linkurile de înregistrare */
+.register-link p a {
+    color: #007bff;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Stiluri pentru rețele sociale */
 .social-media {
     list-style: none;
     padding: 0;
@@ -424,7 +291,7 @@ body {
     color: #0056b3;
 }
 
-
+/* Stiluri pentru mini-navigare */
 .mininav {
     position: fixed;
     top: 9%;
@@ -436,9 +303,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center; /* Center-align text */
-    box-shadow: 5 5 10px rgba(0, 0, 0, 0.1);
-   
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mininav ul {
@@ -450,7 +315,6 @@ body {
 
 .mininav ul li {
     margin-right: 20px;
-    margin-left: 20%;
 }
 
 .mininav ul li a {
@@ -461,8 +325,5 @@ body {
 }
 
 .mininav ul li a:hover {
-  
     background-color: #545454;
-   
 }
-
