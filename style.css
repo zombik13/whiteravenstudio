@@ -1,15 +1,4 @@
-/* Stiluri pentru body */
-body {
-    margin: 0; /* Elimină marginea implicită */
-    height: 100vh; /* Înalțimea completă a viewport-ului */
-    display: flex; /* Activarea flexbox */
-    align-items: center; /* Centering vertical */
-    justify-content: center; /* Centering horizontal */
-    background-color: #f0f0f0; /* Fundal pentru a evidenția formularul */
-}
-
-/* Stiluri pentru navbar */
-nav { 
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -17,13 +6,12 @@ nav {
     background-color: #000000;
     color: #fff;
     padding: 10px;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
+    text-align: center;
+    box-shadow: 5 5 10px rgba(0, 0, 0, 0.1);
+}
 
 nav ul {
     list-style: none;
@@ -44,12 +32,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #545454;
+    background-color: #000000;
 }
 
 /* Stiluri pentru burger menu */
 .burger {
     margin-top: 10px;
+    position: fixed;
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -60,26 +49,21 @@ nav ul li a:hover {
     width: 25px;
     background-color: #fff;
     margin-bottom: 5px;
+    border-radius: 5px;
+    margin-right: 15px;
 }
 
-
-@media (max-width: 1080px) {
-    .patrulatere-list {
-        margin-top: 100px; /* Ajustează margin-top pentru a lăsa spațiu sub navbar */
-    }
-}
-
-/* Stiluri responsive */
 @media (max-width: 768px) {
     nav ul {
         display: none;
         flex-direction: column;
         background-color: #1e1d1d;
         position: absolute;
-        top: 60px; /* Poziționează meniul sub navbar */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
+        top: 100px; /* Poziționează meniul sub bara de navigare */
+        left: 50%; /* Centrare pe axa X */
+        transform: translateX(-50%); /* Corectează pentru a centra meniul */
+        width: 90%; /* Ajustează lățimea meniului */
+        height: 500px;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -87,8 +71,9 @@ nav ul li a:hover {
     
     nav ul.show {
         display: flex;
+        flex-direction: column;
     }
-
+    
     .burger {
         display: flex;
         position: absolute;
@@ -96,116 +81,64 @@ nav ul li a:hover {
         right: 15px;
         height: 40px;
     }
+
+    .container {
+        margin-left: 5%;
+        margin-top: 5px;
+    }
+
+    body {
+        padding-top: 120px; /* Lasă mai mult spațiu sub navbar */
+    }
+
     .patrulatere-list {
-        flex-direction: column; /* Așază patrulaterele pe verticală pe ecrane mici */
+        flex-direction: column; /* Patrulaterele se aliniază vertical pe ecrane mici */
+        padding-top: 120px; /* Adaugă spațiu între navbar și patrulatere */
+        margin-top: 30px;
     }
+
+    .patrulater {
+        width: auto; /* Setăm lățimea automată pentru patrulatere */
+        margin-right: 0;
+        margin-top: 5%;
+    }
+
+    .patrulater:hover {
+        transform: none;
+    }
+}
+
+/* Ajustarea globală pentru a preveni suprapunerea */
 body {
-        padding-top: 80px; /* Ajustează padding-ul pe ecrane mici dacă navbar-ul se schimbă */
+    padding-top: 80px; /* Compensează înălțimea navbarului fix */
+}
+
+@media (max-width: 1080px) {
+    body {
+        padding-top: 120px; /* Spațiu suplimentar la ecrane mici */
     }
-    
 }
 
-/* Stiluri pentru footer */
-.footer-content {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 16px;
-}
-
-.footer-content p {
-    margin: 0;
-}
-
-/* Stiluri pentru formulare */
-form {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    /* Optional: Maximizează lățimea pe ecrane mici */
-    max-width: 90%; 
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: calc(100% - 22px);
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Stiluri pentru elementele de contact */
-.contact-info {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 50px;
-}
-
-.info-section {
-    width: 300px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-right: 15px;
-}
-
-.info-section:last-child {
-    margin-right: 0;
-}
-
-/* Stiluri pentru lista de patrulatere */
 .patrulatere-list {
     list-style-type: none;
     padding: 0;
-    margin: 0 auto; /* Centrează lista pe orizontală */
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Aranjează patrulaterele la mijloc */
-    align-items: center; /* Aliniază vertical dacă e necesar */
-    gap: 20px; /* Spațiu între patrulatere */
-    max-width: 1200px; /* Lățimea maximă a containerului */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin-top: 100px;
+    padding-top: 100px; /* Asigură un spațiu între navbar și patrulatere */
 }
 
-/* Stiluri pentru fiecare patrulater */
 .patrulater {
     width: 250px;
     height: 250px;
     background-color: #f0f0f0;
     border-radius: 20px;
-    margin: 30px; /* Poți ajusta pentru a controla spațiul suplimentar */
+    margin: 30px;
     display: block;
     overflow: hidden;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
@@ -216,13 +149,11 @@ input[type="submit"]:hover {
     transform: scale(1.1);
 }
 
-/* Stiluri pentru titluri în patrulatere */
 .patrulater h3 {
     text-align: center;
     margin-top: 20px;
 }
 
-/* Stiluri pentru imagini */
 .patrulater img {
     max-width: 100%;
     height: auto;
@@ -230,121 +161,49 @@ input[type="submit"]:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
-
-/* Stiluri pentru logo și navbar */
-.logo {
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.2);
-}
-
-.navbar a {
-    display: inline-block;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.navbar a:hover {
-    transform: scale(1.2);
-}
-
-/* Stiluri pentru secțiunea de logare */
-.logare {
-    margin-top:10px;
-    pozition: fixed;
-    z-index: 1;
-}
-
-.logare h1 {
-    font-size: 36px;
-    text-align: center;
-}
-
-.logare .btn {
-    width: 100%;
-    height: 45px;
-    background-color: #6b9bcf;
-    border: none;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #f4f4f4;
-    font-weight: 600;
-}
-
-.logare .remeber-forgot {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-}
-
-/* Stiluri pentru linkurile de înregistrare */
-.register-link p a {
-    color: #007bff;
-}
-
-.register-link p a:hover {
-    text-decoration: underline;
-}
-
-/* Stiluri pentru rețele sociale */
-.social-media {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.social-media li:not(:last-child) {
-    margin-right: 10px;
-}
-
-.social-media a {
-    text-decoration: none;
-    color: #007bff;
-    transition: color 0.3s ease;
-}
-
-.social-media a:hover {
-    color: #0056b3;
-}
-
-/* Stiluri pentru mini-navigare */
-.mininav {
-    position: fixed;
-    top: 9%;
-    left: 0;
-    width: 100%;
-    background-color: #6c6c6c;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.mininav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.mininav ul li {
-    margin-right: 20px;
-}
-
-.mininav ul li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adăugată tranziție pentru culoare */
 }
 
-.mininav ul li a:hover {
-    background-color: #545454;
+.patrulater {
+    width: 250px;
+    height: 250px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin: 30px;
+    display: block;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tranizitie pentru umbră */
+}
+
+.patrulater:hover {
+    transform: scale(1.05); /* Scăderea scalei la hover */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5); /* Umbra mai pronunțată la hover */
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+        position: absolute;
+        top: 15px; /* Ajustare pentru a oferi mai mult spațiu */
+        right: 20px;
+        height: 50px; /* Dimensiune mărită pentru a fi mai ușor de utilizat */
+    }
+
+    .patrulater {
+        width: 90%; /* Face patrulaterele mai largi pe ecrane mici */
+        max-width: 250px; /* Maximizăm lățimea pentru a preveni expansiunea prea mare */
+        margin: 20px auto; /* Centrăm patrulaterele pe ecrane mici */
+    }
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Asigurăm o lățime maximă a containerului */
+    padding: 0 20px; /* Adăugăm un padding pentru a evita coliziunile cu marginile ecranului */
 }
