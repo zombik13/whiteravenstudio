@@ -9,10 +9,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center; /* Center-align text */
-    box-shadow: 5 5 10px rgba(0, 0, 0, 0.1);
-   
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Adaugă această linie */
 }
+
 
 nav ul {
     list-style: none;
