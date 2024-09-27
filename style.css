@@ -207,3 +207,29 @@ nav ul li a {
     max-width: 1200px; /* Asigurăm o lățime maximă a containerului */
     padding: 0 20px; /* Adăugăm un padding pentru a evita coliziunile cu marginile ecranului */
 }
+.footer-content {
+    position: fixed; /* Fixează footer-ul */
+    bottom: 0; /* Plasează-l în partea de jos a paginii */
+    left: 0; /* Aliniere la stânga */
+    width: 100%; /* Latimea de 100% */
+    background-color: #000000; /* Culorează fundalul footer-ului */
+    color: #fff; /* Culorează textul în alb */
+    padding: 20px 0; /* Adaugă un spațiu de 20px sus și jos */
+    text-align: center; /* Aliniază textul la centru */
+    font-size: 16px; /* Mărimea fontului */
+}
+
+
+.footer-content p {
+    margin: 0; /* Elimină marginile din jurul textului */
+    font-size: inherit; /* Folosește mărimea fontului din părinte */
+}
+
+.footer-content p::after {
+    content: ''; /* Adaugă un element de tip pseudo-element */
+    display: block; /* Face elementul să fie un bloc */
+    width: 100%; /* Latimea de 100% */
+    height: 1px; /* Înălțime de 1 pixel */
+    background-color: #fff; /* Culorează linia în alb */
+    margin-top: 10px; /* Adaugă spațiu între text și linie */
+}
