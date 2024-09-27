@@ -1,19 +1,8 @@
-/* Stiluri pentru body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    padding-top: 60px; /* Spațiu pentru navbar */
-}
+
 
 /* Stiluri pentru navbar */
 nav {
-    position: flex;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
