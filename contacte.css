@@ -124,15 +124,26 @@ nav ul li a:hover {
     transform: none;
   }
   .contact-info {
-    flex-direction: column; /* Schimbă direcția de afișare a div-urilor pe coloane */
-    align-items: center; /* Aliniază div-urile pe centru */
+    display: flex;
+    flex-direction: column; /* Schimbă direcția de afișare la coloană */
+    align-items: center; /* Centrează elementele în coloană */
+    margin-top: 50px;
 }
 
 .info-section {
-    width: 90%; /* Setează lățimea div-urilor la 90% pentru a se potrivi ecranului mai mic */
-    margin-right: 0; /* Elimină marginea dreaptă */
-    margin-bottom: 20px; /* Adaugă o margine inferioară între div-uri */
+    width: 90%; /* Setează lățimea la 90% pentru a se potrivi cu ecranul */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px; /* Spațiu între secțiuni */
 }
+
+.info-section:last-child {
+    margin-bottom: 0; /* Elimină marginea pentru ultimul div */
+}
+
 .logare ul {
     flex-direction: row; /* Așezare orizontală a elementelor */
     flex-wrap: wrap; /* Împachetare pe mai multe linii dacă nu încap toate elementele pe o singură linie */
