@@ -1,8 +1,11 @@
 /* Stiluri pentru body */
 body {
-
-    margin-top: 60px; /* Adaugă un spațiu de sus pentru a nu acoperi conținutul */
-
+    margin: 0; /* Elimină marginea implicită */
+    height: 100vh; /* Înalțimea completă a viewport-ului */
+    display: flex; /* Activarea flexbox */
+    align-items: center; /* Centering vertical */
+    justify-content: center; /* Centering horizontal */
+    background-color: #f0f0f0; /* Fundal pentru a evidenția formularul */
 }
 
 /* Stiluri pentru navbar */
@@ -107,14 +110,13 @@ nav ul li a:hover {
 
 /* Stiluri pentru formulare */
 form {
-    position:fixed;
-    margin-top:50%;
-    margin-left:50%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
+    /* Optional: Maximizează lățimea pe ecrane mici */
+    max-width: 90%; 
 }
 
 label {
