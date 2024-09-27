@@ -92,7 +92,9 @@ nav ul li a:hover {
     .patrulatere-list {
         flex-direction: column; /* Așază patrulaterele pe verticală pe ecrane mici */
     }
-
+body {
+        padding-top: 80px; /* Ajustează padding-ul pe ecrane mici dacă navbar-ul se schimbă */
+    }
     
 }
 
