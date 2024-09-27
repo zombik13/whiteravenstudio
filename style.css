@@ -13,7 +13,7 @@ body {
 
 /* Stiluri pentru navbar */
 nav {
-    position: fixed;
+    position: flex;
     top: 0;
     left: 0;
     width: 100%;
