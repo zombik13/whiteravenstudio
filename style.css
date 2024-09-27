@@ -107,7 +107,8 @@ nav ul li a:hover {
 
 /* Stiluri pentru formulare */
 form {
-    margin-top:10px;
+    margin-top:50%;
+    margin-left:50%;
     position:fixed;
     background-color: #fff;
     border-radius: 8px;
