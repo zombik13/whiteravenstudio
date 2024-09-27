@@ -1,125 +1,209 @@
-<!DOCTYPE html>
-<html lang="RO">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="photo/logo White Raven.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css"  href="style.css"> 
-</head>
-<body>
-    <nav>
-        <div class="logo">
-            <a href="index.html">
-     <img src="photo/logo White Raven.png" height="50px" alt="MeniulPrincipal">
-        </a>
-        </div>        
-    <ul>
-        <li class="navbar"><a href="#"></a></li>
-       <li class="navbar">
-        <a href="profil.html">
-          <img src="photo/103144689-simple-male-symbol-man-icon-white-icon-with-shadow-on-transparent-background.jpeg" height="15px">
-          <span>Profil</span>
-          </a>
-       </li>
-        <li class="navbar">
-          <a href="Favorite.html">
-           <img src="photo/inima.png" height="15px">
-            <span>Favorite</span>
-         </a>
-      </li>
-        <li class="navbar">
-          <a href="Cos.html">
-          <img src="photo/cos.jpg.png" height="15px">
-          <span>Cos</span>
-        </a>
-      </li>
-        <li class="navbar">
-          <a href="Contacte.html">
-           <img src="photo/Contecte.png" height="15px">
-            <span>Contacte</span>
-         </a>
-        </li>
-      </ul>
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5 5 10px rgba(0, 0, 0, 0.1);
+}
 
-            <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    <!--
- <div class="mininav">
-        <ul class="#">
-          <li>
-      <span>Marimea</span>
-      <select name="zamsh" id="marime">
-        <option value="optiune1"></option>
-        <option value="optiune2">XS</option>
-        <option value="optiune3">S</option>
-        <option value="optiune4">M</option>
-        <option value="optiune5">L</option>
-        <option value="optiune6">XL</option>
-        <option value="optiune3">2XL</option>
-        <option value="optiune3">3XL</option>
-      </select>
-          </li>
-      <li>
-<span>Material</span>
-<select name="zamsh" id="zamsh">
-  <option value="optiune1"></option>
-  <option value="optiune2">Piele</option>
-  <option value="optiune3">zamsh</option>
-</select>
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-      </li>
-<li>
-  <span>Culoare</span>
-  <select name="color" id="Alb">
-    <option value="optiune1"></option>
-    <option value="optiune2">negru</option>
-    <option value="optiune3">alb</option>
-  </select>
-</li>
-<li>
-  <span>Producator</span>
-  <select name="Producator" id="Original">
-    <option value="optiune1"></option>
-    <option value="optiune2">Original</option>
-    <option value="optiune3">Fake</option>
-  </select>
-  
-</li>
-        </ul>
-      </div>
-  -->
-    </nav>
-     <div class="container">
-        <ul class="patrulatere-list">
-            <li class="patrulater"><h3>Clasic</h3><img src="photo/Classic-Mens-Style-and-the-New-Rules-of-Classic-Elegance.jpeg" height="30px"></li>
-            <li class="patrulater"><h3>Modern</h3><img src="photo/share_2022-jazz-dans-modern-dans-rave-haine-roșii-vesta-thumbs.jpeg" height="30px"></li>
-            <li class="patrulater"><h3>Sport</h3><img src="photo/New-Style-Autumn-Men-s-Sports-Suit-Casual-Men-s-Sportswear.jpeg" height="30px"></li>
-            <li class="patrulater"><h3>Minimalism</h3><img src="photo/103144689-simple-male-symbol-man-icon-white-icon-with-shadow-on-transparent-background.jpeg" height="30px"></li>
-            <li class="patrulater"><h3>Costum</h3><img src="photo/black-men-fashion-icons-set-vector-4315593.jpeg" height="30px"></li>
-            <li class="patrulater"><h3>....</h3><img src="" ></li>
-        </ul>
-    </div>
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #000000;
+}
+
+/* Stiluri pentru burger menu */
+.burger {
+    margin-top: 10px;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1e1d1d;
+        position: absolute;
+        top: 100px; /* Poziționează meniul sub bara de navigare */
+        left: 50%; /* Centrare pe axa X */
+        transform: translateX(-50%); /* Corectează pentru a centra meniul */
+        width: 90%; /* Ajustează lățimea meniului */
+        height: 500px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
     
-    <script>
-        // JavaScript pentru a afișa și ascunde meniul burger la clic
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('nav ul');
-      
-        burger.addEventListener('click', () => {
-          nav.classList.toggle('show');
-        });
-      </script>
-        
-        <footer class="footer-content">
-    <div class="footer-content">
-        <h4>Toate drepturile rezervate &copy; 2024 WhiteRaven</h4>
-    </div>
- </footer>
-</body>
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .burger {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        height: 40px;
+    }
 
-</html>
+    .container {
+        margin-left: 5%;
+        margin-top: 5px;
+    }
 
+    body {
+        padding-top: 120px; /* Lasă mai mult spațiu sub navbar */
+    }
 
+    .patrulatere-list {
+        flex-direction: column; /* Patrulaterele se aliniază vertical pe ecrane mici */
+        padding-top: 120px; /* Adaugă spațiu între navbar și patrulatere */
+        margin-top: 30px;
+    }
+
+    .patrulater {
+        width: auto; /* Setăm lățimea automată pentru patrulatere */
+        margin-right: 0;
+        margin-top: 5%;
+    }
+
+    .patrulater:hover {
+        transform: none;
+    }
+}
+
+/* Ajustarea globală pentru a preveni suprapunerea */
+body {
+    padding-top: 80px; /* Compensează înălțimea navbarului fix */
+}
+
+@media (max-width: 1080px) {
+    body {
+        padding-top: 120px; /* Spațiu suplimentar la ecrane mici */
+    }
+}
+
+.patrulatere-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin-top: 100px;
+    padding-top: 100px; /* Asigură un spațiu între navbar și patrulatere */
+}
+
+.patrulater {
+    width: 250px;
+    height: 250px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin: 30px;
+    display: block;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.patrulater:hover {
+    transform: scale(1.1);
+}
+
+.patrulater h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.patrulater img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adăugată tranziție pentru culoare */
+}
+
+.patrulater {
+    width: 250px;
+    height: 250px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin: 30px;
+    display: block;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tranizitie pentru umbră */
+}
+
+.patrulater:hover {
+    transform: scale(1.05); /* Scăderea scalei la hover */
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5); /* Umbra mai pronunțată la hover */
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+        position: absolute;
+        top: 15px; /* Ajustare pentru a oferi mai mult spațiu */
+        right: 20px;
+        height: 50px; /* Dimensiune mărită pentru a fi mai ușor de utilizat */
+    }
+
+    .patrulater {
+        width: 90%; /* Face patrulaterele mai largi pe ecrane mici */
+        max-width: 250px; /* Maximizăm lățimea pentru a preveni expansiunea prea mare */
+        margin: 20px auto; /* Centrăm patrulaterele pe ecrane mici */
+    }
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Asigurăm o lățime maximă a containerului */
+    padding: 0 20px; /* Adăugăm un padding pentru a evita coliziunile cu marginile ecranului */
+}
