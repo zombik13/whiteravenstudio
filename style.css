@@ -89,6 +89,11 @@ nav ul li a:hover {
         right: 15px;
         height: 40px;
     }
+    .patrulatere-list {
+        flex-direction: column; /* Așază patrulaterele pe verticală pe ecrane mici */
+    }
+
+    
 }
 
 /* Stiluri pentru footer */
