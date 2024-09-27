@@ -9,20 +9,20 @@ body {
 }
 
 /* Stiluri pentru navbar */
-nav {
-    position: fixed; /* Fixează bara de navigare */
-    top: 0; /* Poziționează în partea de sus */
-    left: 0; /* Poziționează la stânga */
-    width: 100%; /* Lățimea de 100% */
-    background-color: #000000; /* Fundal negru */
-    color: #fff; /* Text alb */
-    padding: 10px; /* Spațiu interior */
-    display: flex; /* Flexbox pentru aranjare */
-    justify-content: space-between; /* Spațiu între elemente */
-    align-items: center; /* Aliniază vertical elementele */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Umbră */
-    z-index: 1000; /* Asigură că este deasupra altor elemente */
-}
+nav { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 
 
 nav ul {
@@ -205,7 +205,7 @@ input[type="submit"]:hover {
     height: 250px;
     background-color: #f0f0f0;
     border-radius: 20px;
-    margin: 20px; /* Poți ajusta pentru a controla spațiul suplimentar */
+    margin: 30px; /* Poți ajusta pentru a controla spațiul suplimentar */
     display: block;
     overflow: hidden;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
