@@ -228,6 +228,8 @@ input[type="submit"]:hover {
 
 /* Stiluri pentru secțiunea de logare */
 .logare {
+    margin-top:10px;
+    pozition: fixed;
     z-index: 1;
 }
 
